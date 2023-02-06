@@ -81,6 +81,15 @@ void uart_putd( uint8_t byte ) {
 	uart_putc( ( byte / 1 ) % 10 + '0' );
 }
 
+void uart_put_u16( uint16_t value ) {
+
+	uart_putc( ( value / 10000 ) % 10+ '0' );
+	uart_putc( ( value / 1000 ) % 10 + '0' );
+	uart_putc( ( value / 100 ) % 10 + '0' );
+	uart_putc( ( value / 10 ) % 10 + '0' );
+	uart_putc( ( value / 1 ) % 10 + '0' );
+}
+
 void uart_putbuf( uint8_t * buf, uint8_t len, char * label ) {
 	uint8_t i = 0;
 	uart_puts( label );

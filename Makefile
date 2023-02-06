@@ -1,5 +1,5 @@
 MCU=attiny2313
-F_CPU=8000000
+F_CPU=16000000
 
 CC=avr-gcc
 OBJCOPY=avr-objcopy

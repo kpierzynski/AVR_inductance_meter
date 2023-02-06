@@ -33,6 +33,8 @@ void uart_putd( uint8_t byte );
 void uart_puth( uint8_t byte );
 void uart_putb( uint8_t byte );
 
+void uart_put_u16( uint16_t value );
+
 void uart_putbuf( uint8_t * buf, uint8_t len, char * label );
 
 #endif /* UART_H_ */
